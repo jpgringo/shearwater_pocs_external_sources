@@ -1,3 +1,3 @@
-module shearwater.ai/pocs/weater/open_weather
+module shearwater.ai/pocs/weather/open_weather
 
 go 1.18
