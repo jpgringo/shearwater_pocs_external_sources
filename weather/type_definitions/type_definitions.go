@@ -1,5 +1,5 @@
-// Package types provides publicly available type for the weather package
-package types
+// Package type_definitions provides publicly available type for the weather package
+package type_definitions
 
 import (
 	"sync"
@@ -14,7 +14,7 @@ type Coordinates struct {
 type PrecipitationRecord struct {
 	PrecipitationType string
 	Window            int32
-	Amount            int32
+	Amount            float64
 }
 
 type WindData struct {

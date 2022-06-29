@@ -3,13 +3,13 @@
 package weather
 
 import (
-	"shearwater.ai/pocs/weather/internal/adapters/open_weather"
-	"shearwater.ai/pocs/weather/types"
+	"github.com/jpgringo/shearwater_pocs_external_sources/weather/internal/adapters/open_weather"
+	"github.com/jpgringo/shearwater_pocs_external_sources/weather/type_definitions"
 	"sync"
 )
 
-func GetWeather(config types.Config, respCh chan types.CurrentWeather, wg *sync.WaitGroup) {
-	var weatherFunc types.GetWeatherFunc
+func GetWeather(config type_definitions.Config, respCh chan type_definitions.CurrentWeather, wg *sync.WaitGroup) {
+	var weatherFunc type_definitions.GetWeatherFunc
 	switch config.Service {
 	case "OpenWeather":
 		weatherFunc = weather.GetOpenWeather
